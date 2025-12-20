@@ -223,7 +223,7 @@ export default function Navbar() {
                     <h4 className="font-semibold text-white group-hover:text-kasibet-accent transition-colors">
                       Card Games
                     </h4>
-                    <p className="text-xs text-gray-400 mt-0.5">7 games available</p>
+                    <p className="text-xs text-gray-400 mt-0.5">4 games available</p>
                   </div>
                 </div>
               </div>
@@ -274,13 +274,6 @@ export default function Navbar() {
 
           {/* Other Menu Items */}
           <div className="pt-2 border-t border-gray-800 space-y-2">
-            <Link 
-              to="/history" 
-              className="hover:text-yellow-500 block py-2 transition-colors" 
-              onClick={() => setSidebarOpen(false)}
-            >
-              📺 Live Matches
-            </Link>
             <Link 
               to="/leaderboard" 
               className="hover:text-yellow-500 block py-2 transition-colors" 

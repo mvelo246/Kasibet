@@ -24,7 +24,7 @@ export default function HowToPlay() {
           <div>
             <h3 className="font-semibold text-white mb-2">🃏 Card Games</h3>
             <p className="text-gray-300">
-              Play Poker, Blackjack, Rummy, and more. Each game has its own rules and strategies.
+              Play Casino, Crazy 8s, 5 Card, Poker, and more. Each game has its own rules and strategies.
               Master the game to increase your chances of winning.
             </p>
           </div>

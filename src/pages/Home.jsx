@@ -5,13 +5,10 @@ import Button from '../components/Button'
 
 export default function Home() {
   const cardGames = [
-    { id: 'poker', name: 'Poker', minBet: 10, players: 1234, icon: '🃏' },
-    { id: 'blackjack', name: 'Blackjack', minBet: 5, players: 892, icon: '🎴' },
-    { id: 'rummy', name: 'Rummy', minBet: 15, players: 567, icon: '🂡' },
-    { id: 'baccarat', name: 'Baccarat', minBet: 20, players: 445, icon: '🎰' },
     { id: 'casino', name: 'Casino', minBet: 10, players: 678, icon: '🎲' },
-    { id: 'crazy8', name: 'Crazy 8', minBet: 8, players: 523, icon: '🃎' },
+    { id: 'crazy8', name: 'Crazy 8s', minBet: 8, players: 523, icon: '🃎' },
     { id: '5card', name: '5 Card', minBet: 12, players: 789, icon: '🂮' },
+    { id: 'poker', name: 'Poker', minBet: 10, players: 1234, icon: '🃏' },
   ]
 
   const boardGames = [
