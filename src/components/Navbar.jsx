@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { useWallet } from '../context/WalletContext'
@@ -19,6 +19,20 @@ export default function Navbar() {
 
   // Calculate unread count from conversations
   const totalUnreadCount = conversations.reduce((sum, conv) => sum + (conv.unread || 0), 0) || unreadCount
+
+  // Prevent body scroll when sidebar is open
+  useEffect(() => {
+    if (sidebarOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [sidebarOpen])
 
   const handleSearch = (e) => {
     e.preventDefault()

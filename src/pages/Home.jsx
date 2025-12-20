@@ -1,9 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 import Card from '../components/Card'
 import Button from '../components/Button'
+import RegisterModal from '../components/RegisterModal'
+import LoginModal from '../components/LoginModal'
 
 export default function Home() {
+  const { user } = useAuth()
+  const navigate = useNavigate()
+  const [registerModalOpen, setRegisterModalOpen] = useState(false)
+  const [loginModalOpen, setLoginModalOpen] = useState(false)
+
+  const handlePlayNow = (e, gameId) => {
+    if (!user) {
+      e.preventDefault()
+      setRegisterModalOpen(true)
+    } else {
+      navigate(`/games/${gameId}/opponent`)
+    }
+  }
   const cardGames = [
     { id: 'casino', name: 'Casino', minBet: 10, players: 678, icon: '🎲' },
     { id: 'crazy8', name: 'Crazy 8s', minBet: 8, players: 523, icon: '🃎' },
@@ -103,11 +119,13 @@ export default function Home() {
                   <p className="text-xs text-gray-400 mb-2">
                     Min: R{game.minBet} • {game.players.toLocaleString()} players
                   </p>
-                  <Link to={`/games/${game.id}/opponent`}>
-                    <Button variant="primary" className="w-full text-xs py-2">
-                      Play Now
-                    </Button>
-                  </Link>
+                  <Button 
+                    variant="primary" 
+                    className="w-full text-xs py-2"
+                    onClick={(e) => handlePlayNow(e, game.id)}
+                  >
+                    Play Now
+                  </Button>
                 </Card>
               ))}
           </div>
@@ -131,11 +149,13 @@ export default function Home() {
                   <p className="text-xs text-gray-400 mb-2">
                     Min: R{game.minBet} • {game.players.toLocaleString()} players
                   </p>
-                  <Link to={`/games/${game.id}/opponent`}>
-                    <Button variant="primary" className="w-full text-xs py-2">
-                      Play Now
-                    </Button>
-                  </Link>
+                  <Button 
+                    variant="primary" 
+                    className="w-full text-xs py-2"
+                    onClick={(e) => handlePlayNow(e, game.id)}
+                  >
+                    Play Now
+                  </Button>
                 </Card>
               ))}
           </div>
@@ -159,11 +179,13 @@ export default function Home() {
                   <p className="text-xs text-gray-400 mb-2">
                     Min: R{game.minBet} • {game.players.toLocaleString()} players
                   </p>
-                  <Link to={`/games/${game.id}/opponent`}>
-                    <Button variant="primary" className="w-full text-xs py-2">
-                      Play Now
-                    </Button>
-                  </Link>
+                  <Button 
+                    variant="primary" 
+                    className="w-full text-xs py-2"
+                    onClick={(e) => handlePlayNow(e, game.id)}
+                  >
+                    Play Now
+                  </Button>
                 </Card>
               ))}
           </div>
@@ -203,6 +225,23 @@ export default function Home() {
           </Card>
         </div>
       </section>
+
+      <RegisterModal
+        isOpen={registerModalOpen}
+        onClose={() => setRegisterModalOpen(false)}
+        onSwitchToLogin={() => {
+          setRegisterModalOpen(false)
+          setLoginModalOpen(true)
+        }}
+      />
+      <LoginModal
+        isOpen={loginModalOpen}
+        onClose={() => setLoginModalOpen(false)}
+        onSwitchToRegister={() => {
+          setLoginModalOpen(false)
+          setRegisterModalOpen(true)
+        }}
+      />
     </div>
   )
 }

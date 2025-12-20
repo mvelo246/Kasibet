@@ -1,9 +1,16 @@
 import React, { useState } from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 import Card from '../components/Card'
 import Button from '../components/Button'
+import RegisterModal from '../components/RegisterModal'
+import LoginModal from '../components/LoginModal'
 
 export default function Games() {
+  const { user } = useAuth()
+  const navigate = useNavigate()
+  const [registerModalOpen, setRegisterModalOpen] = useState(false)
+  const [loginModalOpen, setLoginModalOpen] = useState(false)
   const [searchParams] = useSearchParams()
   const category = searchParams.get('category')
   const [activeTab, setActiveTab] = useState(category || 'cards')
@@ -52,6 +59,15 @@ export default function Games() {
         return 'gradient-billiards'
       default:
         return 'gradient-card-games'
+    }
+  }
+
+  const handlePlayNow = (e, gameId) => {
+    if (!user) {
+      e.preventDefault()
+      setRegisterModalOpen(true)
+    } else {
+      navigate(`/games/${gameId}/opponent`)
     }
   }
 
@@ -104,14 +120,33 @@ export default function Games() {
               <p className="text-xs text-gray-400 mb-2">
                 Min: R{game.minBet} • {game.players.toLocaleString()} players
               </p>
-              <Link to={`/games/${game.id}/opponent`}>
-                <Button variant="primary" className="w-full text-xs py-2">
-                  Play Now
-                </Button>
-              </Link>
+              <Button 
+                variant="primary" 
+                className="w-full text-xs py-2"
+                onClick={(e) => handlePlayNow(e, game.id)}
+              >
+                Play Now
+              </Button>
             </Card>
           ))}
       </div>
+
+      <RegisterModal
+        isOpen={registerModalOpen}
+        onClose={() => setRegisterModalOpen(false)}
+        onSwitchToLogin={() => {
+          setRegisterModalOpen(false)
+          setLoginModalOpen(true)
+        }}
+      />
+      <LoginModal
+        isOpen={loginModalOpen}
+        onClose={() => setLoginModalOpen(false)}
+        onSwitchToRegister={() => {
+          setLoginModalOpen(false)
+          setRegisterModalOpen(true)
+        }}
+      />
     </div>
   )
 }
