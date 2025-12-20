@@ -31,27 +31,27 @@ export default function Contact() {
           <h2 className="text-xl font-semibold mb-4">Get in Touch</h2>
           <div className="space-y-3 text-gray-300">
             <div>
-              <div className="font-semibold text-white mb-1">📍 Address</div>
+              <div className="font-semibold text-white mb-1"> Address</div>
               <div>123 Main Street<br />Sandton, Johannesburg<br />Gauteng, 2196<br />South Africa</div>
             </div>
             <div>
-              <div className="font-semibold text-white mb-1">📧 Email</div>
+              <div className="font-semibold text-white mb-1">Email</div>
               <div>support@kasibet.co.za</div>
             </div>
             <div>
-              <div className="font-semibold text-white mb-1">📞 Phone</div>
+              <div className="font-semibold text-white mb-1">Phone</div>
               <div>+27 11 123 4567</div>
             </div>
             <div>
-              <div className="font-semibold text-white mb-1">💬 WhatsApp</div>
+              <div className="font-semibold text-white mb-1">WhatsApp</div>
               <div>+27 82 123 4567</div>
             </div>
             <div>
-              <div className="font-semibold text-white mb-1">🕐 Support Hours</div>
+              <div className="font-semibold text-white mb-1">Support Hours</div>
               <div>Monday - Friday: 08:00 - 17:00 SAST<br />Saturday: 09:00 - 13:00 SAST<br />Sunday: Closed</div>
             </div>
             <div>
-              <div className="font-semibold text-white mb-1">⏱️ Response Time</div>
+              <div className="font-semibold text-white mb-1">Response Time</div>
               <div>Within 24 hours (Business Days)</div>
             </div>
           </div>
@@ -60,10 +60,10 @@ export default function Contact() {
         <Card>
           <h2 className="text-xl font-semibold mb-4">Follow Us</h2>
           <div className="space-y-3">
-            <a href="#" className="block text-kasibet-accent hover:underline">📘 Facebook</a>
-            <a href="#" className="block text-kasibet-accent hover:underline">📷 Instagram</a>
-            <a href="#" className="block text-kasibet-accent hover:underline">🐦 Twitter/X</a>
-            <a href="#" className="block text-kasibet-accent hover:underline">💼 LinkedIn</a>
+            <a href="#" className="block text-kasibet-accent hover:underline"> Facebook</a>
+            <a href="#" className="block text-kasibet-accent hover:underline">Instagram</a>
+            <a href="#" className="block text-kasibet-accent hover:underline">Twitter/X</a>
+            <a href="#" className="block text-kasibet-accent hover:underline">LinkedIn</a>
           </div>
           
           <div className="mt-6 pt-6 border-t border-gray-700">

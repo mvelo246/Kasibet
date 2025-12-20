@@ -31,7 +31,7 @@ export default function PlayBilliards() {
         <Card>
           <div className="aspect-[2/1] bg-gradient-to-b from-green-700 to-green-900 rounded-lg flex items-center justify-center relative">
             <div className="text-center text-white">
-              <div className="text-6xl mb-4">🎱</div>
+              <div className="text-6xl mb-4"></div>
               <div>Billiards game interface coming soon</div>
               <div className="text-sm mt-2">This is a placeholder for the {gameId} pool table</div>
             </div>

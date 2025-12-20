@@ -51,7 +51,7 @@ export default function OpponentSelection() {
                 : 'border-kasibet-border hover:border-kasibet-accent'
             }`}
           >
-            <div className="font-semibold mb-1">🎲 Find Random Player</div>
+            <div className="font-semibold mb-1">Find Random Player</div>
             <div className="text-sm text-gray-400">Match with a random player online</div>
           </button>
           <button

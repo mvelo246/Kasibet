@@ -22,21 +22,21 @@ export default function HowToPlay() {
         <h2 className="text-2xl font-semibold mb-4">Game Categories</h2>
         <div className="space-y-4">
           <div>
-            <h3 className="font-semibold text-white mb-2">🃏 Card Games</h3>
+            <h3 className="font-semibold text-white mb-2">Card Games</h3>
             <p className="text-gray-300">
               Play Casino, Crazy 8s, 5 Card, Poker, and more. Each game has its own rules and strategies.
               Master the game to increase your chances of winning.
             </p>
           </div>
           <div>
-            <h3 className="font-semibold text-white mb-2">♟️ Board Games</h3>
+            <h3 className="font-semibold text-white mb-2">Board Games</h3>
             <p className="text-gray-300">
               Challenge opponents in Chess, Checkers, Backgammon, and Ludo. These games require
               strategy, planning, and skill.
             </p>
           </div>
           <div>
-            <h3 className="font-semibold text-white mb-2">🎱 Billiards</h3>
+            <h3 className="font-semibold text-white mb-2">Billiards</h3>
             <p className="text-gray-300">
               Show off your pool skills in 8-Ball, 9-Ball, Snooker, and more. Precision and
               strategy are key to winning.

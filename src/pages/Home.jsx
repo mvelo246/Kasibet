@@ -21,24 +21,24 @@ export default function Home() {
     }
   }
   const cardGames = [
-    { id: 'casino', name: 'Casino', minBet: 10, players: 678, icon: '🎲' },
-    { id: 'crazy8', name: 'Crazy 8s', minBet: 8, players: 523, icon: '🃎' },
-    { id: '5card', name: '5 Card', minBet: 12, players: 789, icon: '🂮' },
-    { id: 'poker', name: 'Poker', minBet: 10, players: 1234, icon: '🃏' },
+    { id: 'casino', name: 'Casino', minBet: 10, players: 678, icon: '' },
+    { id: 'crazy8', name: 'Crazy 8s', minBet: 8, players: 523, icon: '' },
+    { id: '5card', name: '5 Card', minBet: 12, players: 789, icon: '' },
+    { id: 'poker', name: 'Poker', minBet: 10, players: 1234, icon: '' },
   ]
 
   const boardGames = [
-    { id: 'chess', name: 'Chess', minBet: 20, players: 789, icon: '♟️' },
-    { id: 'checkers', name: 'Checkers', minBet: 10, players: 456, icon: '⚫' },
-    { id: 'backgammon', name: 'Backgammon', minBet: 15, players: 323, icon: '🎲' },
-    { id: 'ludo', name: 'Ludo', minBet: 5, players: 634, icon: '🎯' },
+    { id: 'chess', name: 'Chess', minBet: 20, players: 789, icon: '' },
+    { id: 'checkers', name: 'Checkers', minBet: 10, players: 456, icon: '' },
+    { id: 'backgammon', name: 'Backgammon', minBet: 15, players: 323, icon: '' },
+    { id: 'ludo', name: 'Ludo', minBet: 5, players: 634, icon: '' },
   ]
 
   const billiardsGames = [
-    { id: '8ball', name: '8-Ball Pool', minBet: 25, players: 523, icon: '🎱' },
-    { id: '9ball', name: '9-Ball Pool', minBet: 30, players: 398, icon: '9️⃣' },
-    { id: 'snooker', name: 'Snooker', minBet: 50, players: 234, icon: '🎯' },
-    { id: 'straight', name: 'Straight Pool', minBet: 40, players: 187, icon: '🎳' },
+    { id: '8ball', name: '8-Ball Pool', minBet: 25, players: 523, icon: '' },
+    { id: '9ball', name: '9-Ball Pool', minBet: 30, players: 398, icon: '' },
+    { id: 'snooker', name: 'Snooker', minBet: 50, players: 234, icon: '' },
+    { id: 'straight', name: 'Straight Pool', minBet: 40, players: 187, icon: '' },
   ]
 
   return (
@@ -104,7 +104,7 @@ export default function Home() {
         {/* Card Games */}
         <div>
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-xl font-semibold">🃏 Card Games</h2>
+            <h2 className="text-xl font-semibold"> Card Games</h2>
             <Link to="/games?category=cards">
               <button className="btn-outline text-sm">SEE ALL</button>
             </Link>
