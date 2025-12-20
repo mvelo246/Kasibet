@@ -1,5 +1,6 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Games from './pages/Games'
 import OpponentSelection from './pages/OpponentSelection'
@@ -37,6 +38,7 @@ function App() {
           <GameProvider>
             <ChatProvider>
               <Router>
+                <ScrollToTop />
                 <Layout>
                   <Routes>
                     <Route path="/" element={<Home />} />
