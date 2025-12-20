@@ -63,5 +63,28 @@
   .gradient-billiards {
     @apply bg-gradient-to-br from-green-600 to-emerald-600;
   }
+  
+  .sidebar-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #fbbf24 #1f1f1f;
+  }
+  
+  .sidebar-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .sidebar-scroll::-webkit-scrollbar-track {
+    background: #1f1f1f;
+    border-radius: 4px;
+  }
+  
+  .sidebar-scroll::-webkit-scrollbar-thumb {
+    background: #fbbf24;
+    border-radius: 4px;
+  }
+  
+  .sidebar-scroll::-webkit-scrollbar-thumb:hover {
+    background: #f59e0b;
+  }
 }
 

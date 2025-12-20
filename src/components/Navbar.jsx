@@ -118,11 +118,12 @@ export default function Navbar() {
       {/* Sidebar */}
       <div
         id="sidebar"
-        className={`fixed top-0 left-0 h-full w-64 bg-[#111] text-gray-200 transform transition-transform duration-300 ease-in-out z-50 border-r border-gray-800 ${
+        className={`fixed top-0 left-0 h-full w-64 bg-[#111] text-gray-200 transform transition-transform duration-300 ease-in-out z-50 border-r border-gray-800 flex flex-col ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex items-center justify-between p-4 border-b border-gray-700">
+        {/* Header - Fixed */}
+        <div className="flex items-center justify-between p-4 border-b border-gray-700 flex-shrink-0">
           <h2 className="text-xl font-semibold">Menu</h2>
           <button
             id="close-btn"
@@ -134,9 +135,9 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* User Quick Info Section */}
+        {/* User Quick Info Section - Fixed */}
         {user && (
-          <div className="bg-kasibet-bg-modal border-b border-gray-700 p-4 space-y-3">
+          <div className="bg-kasibet-bg-modal border-b border-gray-700 p-4 space-y-3 flex-shrink-0">
             {/* Wallet Balance */}
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
@@ -203,7 +204,8 @@ export default function Navbar() {
           </div>
         )}
 
-        <div className="p-4 space-y-4 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
+        {/* Scrollable Content Area */}
+        <div className="flex-1 overflow-y-auto sidebar-scroll p-4 space-y-4">
           {/* Game Categories Section */}
           <div className="space-y-3 pt-2">
             <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Game Categories</h3>
@@ -290,7 +292,9 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-        <div className="absolute bottom-0 w-full p-4 border-t border-gray-700">
+        
+        {/* Footer - Fixed */}
+        <div className="p-4 border-t border-gray-700 flex-shrink-0">
           <div className="text-xs text-gray-400 text-center">
             <p>Play Responsibly</p>
             <p>18+ Only</p>
